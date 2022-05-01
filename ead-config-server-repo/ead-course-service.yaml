@@ -19,13 +19,9 @@ spring:
     properties:
       hibernate:
         show_sql: true
-  output:
-    ansi:
-      enabled: Always
+ 
   rabbitmq:
-    addresses: amqps://oqaevxaf:6KU7WK_x0k2Et0CwgwlOOdf95NAR4uPG@woodpecker.rmq.cloudamqp.com/oqaevxaf
-
-
+    addresses: amqps://nmgojkfr:Lf_lZQLPVo7Q2oK9UpEcRU3tM_oSFLj9@gull.rmq.cloudamqp.com/nmgojkfr
 logging:
   level:
     com.ead: TRACE
