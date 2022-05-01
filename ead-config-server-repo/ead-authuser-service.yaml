@@ -7,7 +7,7 @@ spring:
   application:
     name: ead-authuser-service
   datasource:
-   url: jdbc:postgresql://localhost:15432/ead-authuser-v2
+    url: jdbc:postgresql://localhost:15432/ead-authuser-v2
     username: postgres
     password: Postgres2019!
   jpa:
@@ -39,7 +39,7 @@ ead:
 
 authuser:
   refreshscope:
-    name: Michelli Brito UPDATE!!!!!!!
+    name: Francitonio Ferreira UPDATE!!!!!!!
 
 management:
   endpoints:
