@@ -8,7 +8,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/francitonioferreiraalves/ead/tree/main/ead-config-server-repo
+          uri: https://github.com/francitonioferreiraalves/ead-config-server-repo
           default-label: main
 
 ead:
