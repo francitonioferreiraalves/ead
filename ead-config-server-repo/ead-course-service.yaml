@@ -3,6 +3,9 @@ server:
   servlet:
     context-path: '/ead-course/'
 
+  error:
+    include-stacktrace: never
+  
 spring:
   application:
     name: ead-course-service
@@ -16,23 +19,24 @@ spring:
       dialect: org.hibernate.dialect.PostgreSQLDialect
       jdbc:
         lob.non-contextual-creation: true
-    properties:
+    properties: 
       hibernate:
         show_sql: true
- 
+        
   rabbitmq:
-    addresses: amqps://nmgojkfr:Lf_lZQLPVo7Q2oK9UpEcRU3tM_oSFLj9@gull.rmq.cloudamqp.com/nmgojkfr
+     addresses: ${RABBIT_ADRESS}
+
 logging:
   level:
     com.ead: TRACE
     root: INFO
     org.springframework.web: DEBUG
-    org.hibernate: INFO
-
+    org.hibernate:  INFO 
+    
 ead:
   api:
     url:
-      authuser: 'http://ead-authuser-service/ead-authuser'
+      authuser: 'http://ead-authuser-service/ead-authuser/'
   broker:
     exchange:
       userEventExchange: ead.userevent
@@ -50,3 +54,5 @@ management:
         include:
           - refresh
           - health
+   
+

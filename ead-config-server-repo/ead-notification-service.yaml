@@ -1,3 +1,4 @@
+
 server:
   port: 8084
   servlet:
@@ -6,8 +7,9 @@ server:
 spring:
   application:
     name: ead-notification-service
+ 
   datasource:
-    url: jdbc:postgresql://localhost:15432/ead-notification-v2
+    url:  jdbc:postgresql://localhost:15432/ead-notification-v2
     username: postgres
     password: Postgres2019!
   jpa:
@@ -19,15 +21,17 @@ spring:
     properties:
       hibernate:
         show_sql: true
-
+ 
   rabbitmq:
-    addresses: amqps://nmgojkfr:Lf_lZQLPVo7Q2oK9UpEcRU3tM_oSFLj9@gull.rmq.cloudamqp.com/nmgojkfr
+    addresses: ${RABBIT_ADRESS}
+
 logging:
   level:
     com.ead: TRACE
     root: INFO
     org.springframework.web: DEBUG
     org.hibernate: INFO
+
 
 ead:
   broker:
@@ -40,6 +44,7 @@ ead:
       notificationCommandKey: ms.notification
 
 
+
 management:
   endpoints:
     web:
@@ -47,3 +52,5 @@ management:
         include:
           - refresh
           - health
+
+
